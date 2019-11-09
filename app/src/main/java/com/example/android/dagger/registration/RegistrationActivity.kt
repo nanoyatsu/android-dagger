@@ -32,7 +32,7 @@ class RegistrationActivity : AppCompatActivity() {
     lateinit var registrationViewModel: RegistrationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        (application as MyApplication).appComponent.inject(this)
+        (application as MyApplication).appComponent.registrationComponent().create().inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
