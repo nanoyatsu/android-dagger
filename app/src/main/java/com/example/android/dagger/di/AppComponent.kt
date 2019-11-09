@@ -9,9 +9,9 @@ import javax.inject.Inject
 @Component(modules = [StorageModule::class])
 interface AppComponent {
     @Component.Factory
-    interface Factory{
+    interface Factory {
         fun create(@BindsInstance context: Context): AppComponent
     }
 
-    fun Inject(activity: RegistrationActivity)
+    fun inject(activity: RegistrationActivity)
 }
